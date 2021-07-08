@@ -8,8 +8,8 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch Polybar, using default config location ~/.config/polybar/config
 
-myc=$(xrandr --query | grep 'HDMI-0')
-if [[ $myc == "HDMI-0 connected primary (normal left inverted right x axis y axis)" ]]	
+myc=$(xrandr --query | grep 'HDMI-1-0')
+if [[ $myc == "HDMI-1-0 connected primary"* ]]	
     then
 		polybar mybar &
 		polybar external
