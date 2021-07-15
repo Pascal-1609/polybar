@@ -11,10 +11,10 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 myc=$(xrandr --query | grep 'HDMI-1-0')
 if [[ $myc == "HDMI-1-0 connected primary"* ]]	
     then
-		polybar mybar &
-		polybar external
+		polybar primary &
+		polybar secondary_left
 	else
-		polybar mybar
+		polybar monitor_single
 fi
 
 
