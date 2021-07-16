@@ -108,7 +108,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm
 modules-center = date
-modules-right = backlight-acpi  pulseaudio memory cpu wlan temperature battery powermenu
+modules-right = backlight-acpi  pulseaudio wlan memory cpu temperature battery powermenu
 
 tray-position = right
 tray-padding = 2
@@ -219,7 +219,9 @@ label-unmounted-foreground = ${colors.foreground-alt}
 [module/bspwm]
 type = internal/bspwm
 
-pin-workspaces = true ;only workspaces active on each screen will be shown
+pin-workspaces = true 
+;only workspaces active on each screen will be shown
+
 label-focused = %name%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
